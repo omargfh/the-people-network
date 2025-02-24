@@ -1,0 +1,17 @@
+export const colorsHex: Record<string, string> = {
+  primary: "#093d61",
+  secondary: "#5496c6",
+  info: "#256594",
+  success: "#73AC39",
+  warning: "#F1A727",
+  error: "#B82E2E",
+  black1: "#000000",
+  black2: "#1D1D1D",
+  black3: "#2B2B2B",
+  white: "#FFFFFF",
+  gray1: "#1F292E",
+  gray2: "#415058",
+  gray3: "#858F94",
+  gray4: "#DCDCDC",
+  gray5: "#E4E6E8",
+};
