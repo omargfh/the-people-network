@@ -8,7 +8,7 @@ import { animateScale } from "../animations";
 import { PNCircle } from "./PeopleNetwork.Circle";
 import { Bodies, Body, Engine, Constraint, World, Runner } from "matter-js";
 import { PNEdges } from "./PeopleNetwork.Edges";
-import { gaussianRandom, sleep } from "../util";
+import { gaussianRandom, sleep, USED } from "../util";
 import { IDestroyable } from "../interfaces";
 
 type PNCircleContext = {
@@ -59,6 +59,7 @@ export default class PeopleNetwork implements IDestroyable {
     this.topLevelContainer.addChild(this.edgesContainer);
     this.topLevelContainer.addChild(this.nodesContainer);
     this.awake();
+    USED(this.__test__);
   }
 
   async awake() {

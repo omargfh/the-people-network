@@ -1,7 +1,7 @@
 import { Application, Container, Graphics, PointData } from "pixi.js";
 import { PNLineStyle } from "./PeopleNetwork.util";
 import { IDestroyable } from "../interfaces";
-import { lerp3 } from "../util";
+import { lerp3, USED } from "../util";
 
 export class PNEdges<T> implements IDestroyable {
   protected graphics = new Graphics();
@@ -16,7 +16,9 @@ export class PNEdges<T> implements IDestroyable {
     public labelBottom: string,
     public width: number,
     public context: T // Extra data to reference
-  ) {}
+  ) {
+    USED(this.app);
+  }
 
   parentTo(container: Container) {
     container.addChild(this.graphics);

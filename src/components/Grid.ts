@@ -52,7 +52,7 @@ export class Grid implements IDestroyable {
 
   draw() {
     const { app, settings } = this;
-    const { bgColors, gridColors, gridSpacing, include } = settings;
+    const { bgColors, gridSpacing, include } = settings;
 
     if (include!.backdrop) {
       const bg = new Graphics()
