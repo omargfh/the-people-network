@@ -1,3 +1,5 @@
+import { Lazy } from "./colors";
+
 export function createLazyValue<T>(initializer: () => T): Lazy<T> {
   let evaluated: T | null = null;
   return (reset: boolean = false) => {
